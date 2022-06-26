@@ -5,7 +5,7 @@ module.exports = defineConfig({
   devServer: {
     https: true,
   },
-  publicPath: '/',
+  publicPath: './',
 
 });
 

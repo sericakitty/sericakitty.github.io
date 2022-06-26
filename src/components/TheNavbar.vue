@@ -14,9 +14,9 @@
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Vanilla JS projects</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/creditcardchecker/creditcardchecker.html" class="dropdown-item" target="_blank">Credit Card Checker</a>
-								<a href="https://sericakitty.github.io/messagemixer/messagemixer.html" class="dropdown-item" target="_blank">Message Mixer</a>
-								<a href="https://sericakitty.github.io/stopwatch/stopwatch.html" class="dropdown-item" target="_blank">Stopwatch</a>
+								<a href="https://sericakitty.github.io/creditcardchecker/creditcardchecker.html" class="dropdown-item">Credit Card Checker</a>
+								<a href="https://sericakitty.github.io/messagemixer/messagemixer.html" class="dropdown-item">Message Mixer</a>
+								<a href="https://sericakitty.github.io/stopwatch/stopwatch.html" class="dropdown-item">Stopwatch</a>
 							</div>
 						</div>
 					</li>
@@ -26,7 +26,7 @@
 					</li>
 
 					<li class="nav-item">
-						<a href="https://sericasofia.github.io/" role="button" class="nav-link navtext" target="_blank">GitHub</a>
+						<a href="https://github.com/sericakitty" role="button" class="nav-link navtext" target="_blank">GitHub</a>
 					</li>
 
 					<li class="nav-item">

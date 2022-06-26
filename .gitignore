@@ -8,8 +8,8 @@ node_modules
 .deploy.sh
 
 # local src folders
-**/helper/
-
+**/src/helper/
+**/src/store/
 
 # local env files
 .env.local
