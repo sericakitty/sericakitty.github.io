@@ -1,0 +1,120 @@
+{
+  "gigs": [
+    {
+      "id": 0,
+      "year": 2021,
+      "isOpen": false,
+      "events": [
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "14.02.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "17.02.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "21.02.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "24.02.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "28.02.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "03.03.2021",
+          "isPast": true
+        },
+        {
+          "title": "Bar gig",
+          "location": "Helsinki Street Pride Bar (Kamppi)",
+          "date": "07.03.2021",
+          "isPast": true
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "year": 2022,
+      "isOpen": true,
+      "events": [
+        {
+          "title": "Tokyo Dreams - 東京の夢",
+          "location": "Helsinki UG",
+          "date": "19.02.2022",
+          "isPast": true
+        },
+        {
+          "title": "Friend\"s birthday party",
+          "location": "Helsinki UG",
+          "date": "18.03.2022",
+          "isPast": true
+        },
+        {
+          "title": "Kova Sound: Free Party 2",
+          "location": "Helsinki UG",
+          "date": "09.04.2022",
+          "isPast": true
+        },
+        {
+          "title": "West Helsinki UG",
+          "location": "Helsinki UG",
+          "date": "18.04.2022",
+          "isPast": true
+        },
+        {
+          "title": "Kova Sound: Cyber Attak",
+          "location": "Helsinki UG",
+          "date": "04.06.2022",
+          "isPast": true
+        },
+        {
+          "title": "Hypecon Iltabileet",
+          "location": "Hypecon (Hyvinkaa)",
+          "date": "11.06.2022",
+          "isPast": true
+        },
+        {
+          "title": "Karkkinapakka b2b with",
+          "b2b": "<a href=\"https://www.mixcloud.com/angelicaroselie/\" target=\"_blank\">Angelica Roselie</a>",
+          "location": "Helsinki UG",
+          "date": "16.07.2022",
+          "isPast": false
+        },
+        {
+          "title": "Nekocon Iltabileet",
+          "location": "Nekocon (Kuopio)",
+          "date": "09.07.2022",
+          "isPast": false
+        },
+        {
+          "title": "Neonya!! Party &amp EastBOP Festival '22",
+          "location": "Nekocon (Kuopio)",
+          "date": "30.07.2022",
+          "isPast": false
+        },
+        {
+          "title": "TBA",
+          "location": "BTA",
+          "date": "20.08.2022"
+        }
+      ]
+    }
+  ]
+}
