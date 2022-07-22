@@ -4,12 +4,6 @@
 	</section>
 </template>
 
-<script>
-	export default {
-
-	};
-</script>
-
 <style>
 	.footer {
 		margin-top: 100px;

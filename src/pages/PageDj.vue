@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<h1>Gig Calendar</h1>
+		<h1>Gigs Calendar</h1>
 		<div class="gigs">
 			<GigList :gigs="gigs" />
 		</div>
@@ -9,16 +9,24 @@
 
 <script>
 	import GigList from '@/components/GigList.vue';
-	import sourceData from '@/assets/data.json';
+	import axios from 'axios';
 
 	export default {
+		data() {
+			return {
+				gigs: [],
+			};
+		},
 		components: {
 			GigList,
 		},
-		computed: {
-			gigs() {
-				return { ...sourceData }.gigs;
-			},
+		async created() {
+			try {
+				const res = await axios.get('http://localhost:3000/gigs');
+				this.gigs = res.data;
+			} catch (e) {
+				console.log(e.message);
+			}
 		},
 	};
 </script>

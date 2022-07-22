@@ -1,7 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-
 import PageHome from '@/pages/PageHome.vue';
-
 import PageNotFound from '@/pages/PageNotFound.vue';
 
 const routes = [
@@ -17,10 +15,14 @@ const routes = [
     props: true,
   },
   {
+    path: '/phasergame/buginvader',
+    name: 'buginvader',
+    component: () => import('@/pages/PageBugInvader.vue'),
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'notfound',
     component: PageNotFound,
-
   },
 
 ];

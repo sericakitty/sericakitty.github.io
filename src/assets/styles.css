@@ -21,6 +21,8 @@
     --main-btn-color: rgb(245, 111, 245);
     --btn-text-color: #ffffff;
     --text-area-color: #f8d4ff;
+    /* gig table past gigs */
+    --past-gigs-color: #e191f5;
 }
 
 body {
@@ -198,4 +200,21 @@ ul {
 
 #hidden_div {
     display: none;
+}
+
+
+
+/* phaserGame */
+
+canvas {
+    /* And see postBoot() in JS */
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+
+}
+
+.gamecenteringcontainer {
+    text-align: center;
+    padding-top: 20px;
 }

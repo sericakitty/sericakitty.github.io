@@ -1,37 +1,46 @@
 <template>
 	<section>
-		<details :open="gig.isOpen" v-for="gig in reversedGigList" :key="gig.id">
+		<div v-if="gigs.length">
 
-			<summary>
-				<span id="labelShow">Show Up {{ gig.year }} Gigs &#9660;</span>
-				<span id="labelHide" class="defaultHide">Hide Out {{ gig.year }} Gigs &#9650;</span>
-			</summary>
+			<details :open="gig.isOpen" v-for="gig in reversedGigList" :key="gig.id">
 
-			<table>
+				<summary>
+					<span id="labelShow">Show Up {{ gig.year }} Gigs &#9660;</span>
+					<span id="labelHide" class="defaultHide">Hide Out {{ gig.year }} Gigs &#9650;</span>
+				</summary>
 
-				<thead>
-					<tr>
-						<th scope="col" style="width:45%">Event / Club:</th>
-						<th scope="col" style="width:35%">Location:</th>
-						<th scope="col" style="width:20%">Date:</th>
-					</tr>
-				</thead>
+				<table>
 
-				<tbody v-for="(event, index) in gig.events" :key="index">
-					<tr>
-						<td>{{ event.title }} <span v-if="event.b2b" v-html="event.b2b"></span></td>
-						<td>{{ event.location }} </td>
-						<td>{{ event.date }}</td>
-					</tr>
-				</tbody>
+					<thead>
+						<tr>
+							<th scope="col" style="width:45%">Event / Club:</th>
+							<th scope="col" style="width:35%">Location:</th>
+							<th scope="col" style="width:20%">Date:</th>
+						</tr>
+					</thead>
 
-			</table>
+					<tbody v-for="event in gig.events" :key="event.id" :class="checkDate(event.isPast)">
+						<tr>
+							<td>{{ event.title }} <span v-if="event.b2b" v-html="event.b2b"></span></td>
+							<td>{{ event.location }} </td>
+							<td>{{ event.date }}</td>
+						</tr>
+					</tbody>
 
-		</details>
+				</table>
+
+			</details>
+		</div>
+
+		<div v-else>
+			<p>Loading Gigs...</p>
+		</div>
 	</section>
 </template>
 
 <script>
+	import { checkDateIsPast } from '@/helpers/index';
+
 	export default {
 		props: {
 			gigs: {
@@ -39,12 +48,21 @@
 				type: Array,
 			},
 		},
-
 		computed: {
 			reversedGigList() {
-				const copyList = [...this.gigs].reverse();
-				copyList.forEach((element) => element.events.reverse());
+				const copyList = [...this.gigs].reverse(); // Take copy from original list and reversed it
+				copyList.forEach((element) => {
+					element.events.reverse();
+					element.events.forEach((eventDate) => {
+						eventDate.isPast = checkDateIsPast(eventDate.date);
+					});
+				}); // Iterate all events in copylist and reverse them
 				return copyList;
+			},
+		},
+		methods: {
+			checkDate(isPast) {
+				return isPast ? 'past' : '';
 			},
 		},
 
