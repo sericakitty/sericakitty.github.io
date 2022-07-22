@@ -1,40 +1,33 @@
 <template>
 	<section>
-		<div v-if="gigs.length">
+		<details :open="gig.isOpen" v-for="gig in reversedGigList" :key="gig.id">
 
-			<details :open="gig.isOpen" v-for="gig in reversedGigList" :key="gig.id">
+			<summary>
+				<span id="labelShow">Show Up {{ gig.year }} Gigs &#9660;</span>
+				<span id="labelHide" class="defaultHide">Hide Out {{ gig.year }} Gigs &#9650;</span>
+			</summary>
 
-				<summary>
-					<span id="labelShow">Show Up {{ gig.year }} Gigs &#9660;</span>
-					<span id="labelHide" class="defaultHide">Hide Out {{ gig.year }} Gigs &#9650;</span>
-				</summary>
+			<table>
 
-				<table>
+				<thead>
+					<tr>
+						<th scope="col" style="width:45%">Event / Club:</th>
+						<th scope="col" style="width:35%">Location:</th>
+						<th scope="col" style="width:20%">Date:</th>
+					</tr>
+				</thead>
 
-					<thead>
-						<tr>
-							<th scope="col" style="width:45%">Event / Club:</th>
-							<th scope="col" style="width:35%">Location:</th>
-							<th scope="col" style="width:20%">Date:</th>
-						</tr>
-					</thead>
+				<tbody v-for="event in gig.events" :key="event.id" :class="checkDate(event.isPast)">
+					<tr>
+						<td>{{ event.title }} <span v-if="event.b2b" v-html="event.b2b"></span></td>
+						<td>{{ event.location }} </td>
+						<td>{{ event.date }}</td>
+					</tr>
+				</tbody>
 
-					<tbody v-for="event in gig.events" :key="event.id" :class="checkDate(event.isPast)">
-						<tr>
-							<td>{{ event.title }} <span v-if="event.b2b" v-html="event.b2b"></span></td>
-							<td>{{ event.location }} </td>
-							<td>{{ event.date }}</td>
-						</tr>
-					</tbody>
+			</table>
 
-				</table>
-
-			</details>
-		</div>
-
-		<div v-else>
-			<p>Loading Gigs...</p>
-		</div>
+		</details>
 	</section>
 </template>
 

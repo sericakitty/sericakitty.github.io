@@ -11,6 +11,8 @@
 	import GigList from '@/components/GigList.vue';
 	import axios from 'axios';
 
+	const dbURL = './db.json';
+
 	export default {
 		data() {
 			return {
@@ -20,14 +22,14 @@
 		components: {
 			GigList,
 		},
-		async created() {
+		async created() { // created hook, making ajax call. async so we are waiting response
 			try {
-				const res = await axios.get('http://localhost:3000/gigs');
-				this.gigs = res.data;
-			} catch (e) {
-				console.log(e.message);
+				const response = await axios.get(dbURL); // using axios.get method() to make html request to get data from data.json
+				this.gigs = response.data.gigs;
+			} catch (err) {
+				console.log(err.message);
 			}
-		},
+		}
 	};
 </script>
 
