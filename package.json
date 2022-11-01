@@ -5,7 +5,7 @@
   "scripts": {
     "db:serve": "json-server --watch data/db.json",
     "serve": "vue-cli-service serve --https",
-    "build": "vue-cli-service build",
+    "build:prod": "vue-cli-service build --base='/sericakitty.github.io/'",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
