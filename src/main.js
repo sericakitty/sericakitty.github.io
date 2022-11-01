@@ -3,7 +3,24 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 
-createApp(App).use(store).use(router).mount('#app');
+// create app instance
+const app = createApp(App);
+
+// components
+app.use(store);
+app.use(router);
+
+// Mount app
+app.mount('#app');
+
+// GitHub Pages redirect hack for crawler-friendly SPAs
+let { redirect } = window.sessionStorage;
+delete window.sessionStorage.redirect;
+if (redirect && redirect !== window.location.pathname) {
+  redirect = redirect.replace(import.meta.env.BASE_URL, '/');
+
+  router.replace(redirect);
+}
 
 // import './set-public-path';
 // import { h, createApp } from 'vue';
