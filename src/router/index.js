@@ -32,9 +32,11 @@ const routes = [
 // export new router instance
 export default createRouter({
   // Provide the history implementation to use. We are using the no-hash history for simplicity here.
+  base: window.location.origin,
   history: createWebHistory(process.env.BASE_URL),
   routes,
   scrollBehavior() {
     return { top: 0, left: 0 };
   },
+
 });

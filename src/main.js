@@ -17,7 +17,7 @@ app.mount('#app');
 let { redirect } = window.sessionStorage;
 delete window.sessionStorage.redirect;
 if (redirect && redirect !== window.location.pathname) {
-  redirect = redirect.replace(process.env.BASE_URL, '/');
+  redirect = redirect.replace(import.meta.env.BASE_URL, '/');
 
   router.replace(redirect);
 }
