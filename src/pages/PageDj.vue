@@ -49,22 +49,5 @@
 </script>
 
 <style>
-	h2 {
-		font-size: 28px;
-	}
-	.gigs {
-		height: 100%;
-		width: 100%;
-		display: table;
-		list-style: none;
-		margin-bottom: 25px;
-	}
 
-	.events {
-		height: 100%;
-		width: 100%;
-		display: table;
-		list-style: none;
-		margin-bottom: 25px;
-	}
 </style>

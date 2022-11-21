@@ -1,15 +1,14 @@
 **_.DS_Store
-**.DS_Store
 .DS_Store
-node_modules
-**/node_modules
-/dist
+node_modules/*
+dist/
 
 deploy.sh
 
+babel.config.js
+
 # local src folders
-**/src/helper/
-**/src/store/
+src/store/*
 
 # local env files
 .env.local

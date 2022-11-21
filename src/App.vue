@@ -26,8 +26,4 @@
 <style>
 	@import "@/assets/styles.css";
 
-	/* For fixing footer to bottom. Apply to main container, so main is min 70% viewport height and footer is pushed to bottom */
-	.footerfixer {
-		min-height: 70vh;
-	}
 </style>

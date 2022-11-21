@@ -23,8 +23,5 @@
 </script>
 
 <style>
-	.gamecenteringcontainer {
-		text-align: center;
-		padding-top: 20px;
-	}
+	
 </style>

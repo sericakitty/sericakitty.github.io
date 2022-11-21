@@ -20,9 +20,9 @@
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Vanilla JS projects</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/creditcardchecker/creditcardchecker.html" class="dropdown-item">Credit Card Checker</a>
-								<a href="https://sericakitty.github.io/messagemixer/messagemixer.html" class="dropdown-item">Message Mixer</a>
-								<a href="https://sericakitty.github.io/stopwatch/stopwatch.html" class="dropdown-item">Stopwatch</a>
+								<a href="https://sericakitty.github.io/creditcardchecker/" class="dropdown-item">Credit Card Checker</a>
+								<a href="https://sericakitty.github.io/messagemixer/" class="dropdown-item">Message Mixer</a>
+								<a href="https://sericakitty.github.io/stopwatch/" class="dropdown-item">Stopwatch</a>
 							</div>
 						</div>
 					</li>
@@ -31,7 +31,8 @@
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Python projects</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/timecalculator/timecalculator.html" class="dropdown-item">Time Calculator</a>
+								<a href="https://sericakitty.github.io/time_calculator/" class="dropdown-item">Time Calculator</a>
+								<a href="https://sericakitty.github.io/probability_calculator/" class="dropdown-item">Probability Calculator</a>
 							</div>
 						</div>
 					</li>
@@ -64,45 +65,5 @@
 </script>
 
 <style lang='css'>
-	.navbar {
-		background-color: var(--navbar-bg-color);
-		margin-bottom: 20px;
-		font-size: 120%;
-		padding: 0px;
-		box-shadow: 0 2px 2px -2px var(--navbar-bg-color);
-	}
-
-	/* Styling link text color for bootstrap navbar */
-
-	.navtext {
-		color: var(--navbar-link-color);
-	}
-
-	.active {
-		color: var(--main-header-color);
-	}
-
-	.navbar li a:hover {
-		color: var(--main-header-color);
-		transition-duration: var(--link-transition-duration);
-		text-decoration: none;
-	}
-
-	.dropdown-menu {
-		background-color: var(--navbar-bg-color);
-	}
-
-	.dropdown-menu a {
-		color: var(--navbar-link-color);
-	}
-
-	.dropdown-item:hover {
-		background-color: var(--navbar-bg-color);
-		color: var(--main-header-color);
-	}
-
-	/* TEMPORARY FIX FOR COLOR PROBLEM IN NAV BAR */
-	.navtext:not(:active) {
-		color: var(--navbar-link-color);
-	}
+	
 </style>
