@@ -31,7 +31,8 @@
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Python projects</a>
 							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/timecalculator/timecalculator.html" class="dropdown-item">Time Calculator</a>
+								<a href="https://sericakitty.github.io/timecalculator/time_calculator.html" class="dropdown-item">Time Calculator</a>
+								<a href="https://sericakitty.github.io/timecalculator/probability_calculator.html" class="dropdown-item">Probability Calculator</a>
 							</div>
 						</div>
 					</li>
@@ -64,5 +65,4 @@
 </script>
 
 <style lang='css'>
-	
 </style>
