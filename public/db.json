@@ -62,7 +62,7 @@
         },
         {
           "id": 2,
-          "title": "Friend\"s birthday party",
+          "title": "Friend's birthday party",
           "location": "Helsinki UG",
           "date": "18.3.2022"
         },
@@ -87,7 +87,7 @@
         {
           "id": 6,
           "title": "Hypecon Nightrave",
-          "location": "Hypecon (Hyvinkää)",
+          "location": "Hypecon (Hyvinkaa)",
           "date": "11.6.2022"
         },
         {
@@ -105,8 +105,8 @@
         },
         {
           "id": 9,
-          "title": "Neonya!! Party &amp EastBOP Festival '22",
-          "location": "Tiivistämö (Helsinki)",
+          "title": "Neonya!! Party & EastBOP Festival '22",
+          "location": "Tiivistamo (Helsinki)",
           "date": "30.7.2022"
         },
         {
@@ -124,7 +124,7 @@
         {
           "id": 12,
           "title": "Neonya!! Party Hard Sound Halloween 2",
-          "location": "Tiivistämö (Helsinki)",
+          "location": "Tiivistamo (Helsinki)",
           "date": "29.10.2022"
         }
       ]
@@ -143,9 +143,15 @@
         },
         {
           "id": 2,
-          "title": "Tokyo Dreams - 東京の夢 2.0",
+          "title": "Tokyo Dreams - 東京の夢 vol. 2.0",
           "location": "Helsinki UG",
-          "date": "TBA"
+          "date": "27.1.2023"
+        },
+        {
+          "id": 3,
+          "title": "Neonya!! Party",
+          "location": "Tiivistamo (Helsinki)",
+          "date": "4.3.2023"
         }
       ]
     }
@@ -173,7 +179,7 @@
       "id": 4,
       "title": "Tokyo Dreams - 東京の夢 2.0",
       "location": "Helsinki UG",
-      "date": "TBA"
+      "date": "27.1.2023"
     }
   ]
 }
