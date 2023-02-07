@@ -13,13 +13,11 @@ app.use(router);
 // Mount app
 app.mount('#app');
 
-
 // GitHub Pages redirect hack for crawler-friendly SPAs
 let { redirect } = window.sessionStorage;
 delete window.sessionStorage.redirect;
 if (redirect && redirect !== window.location.pathname) {
-  redirect = redirect.replace(import.meta.env.BASE_URL, '/');
-
+  // redirect = redirect.replace(import.meta.env.BASE_URL, '/');
   router.replace(redirect);
 }
 
