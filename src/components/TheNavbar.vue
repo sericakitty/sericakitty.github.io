@@ -19,10 +19,10 @@
 					<li class="nav-item">
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Vanilla JS projects</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/creditcardchecker/creditcardchecker.html" class="dropdown-item">Credit Card Checker</a>
-								<a href="https://sericakitty.github.io/messagemixer/messagemixer.html" class="dropdown-item">Message Mixer</a>
-								<a href="https://sericakitty.github.io/stopwatch/stopwatch.html" class="dropdown-item">Stopwatch</a>
+							<div id="vanillajsprojects" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a href="https://sericakitty.github.io/creditcardchecker/" class="dropdown-item">Credit card checker</a>
+								<a href="https://sericakitty.github.io/messagemixer/" class="dropdown-item">Message mixer</a>
+								<a href="https://sericakitty.github.io/stopwatch/" class="dropdown-item">Stopwatch</a>
 							</div>
 						</div>
 					</li>
@@ -30,9 +30,11 @@
 					<li class="nav-item">
 						<div class="dropdown show">
 							<a class="dropdown-toggle nav-link navtext" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Python projects</a>
-							<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-								<a href="https://sericakitty.github.io/timecalculator/time_calculator.html" class="dropdown-item">Time Calculator</a>
-								<a href="https://sericakitty.github.io/timecalculator/probability_calculator.html" class="dropdown-item">Probability Calculator</a>
+							<div id="pythonprojects" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+								<a href="https://sericakitty.github.io/timecalculator" class="dropdown-item">Time calculator</a>
+								<a href="https://sericakitty.github.io/fromthehat" class="dropdown-item">From the Hat</a>
+								<a href="https://sericakitty.github.io/tictactoe" class="dropdown-item">Tic-tac-toe</a>
+
 							</div>
 						</div>
 					</li>
@@ -59,7 +61,7 @@
 <script>
 
 	export default {
-
+		
 	};
 
 </script>
