@@ -1,9 +1,9 @@
 {
   "name": "sericakitty.github.io",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
-    "db:serve": "json-server --watch data/db.json",
+    "db:serve": "json-server --watch public/db.json",
     "serve": "vue-cli-service serve --https",
     "build:prod": "vue-cli-service build --base='/sericakitty.github.io/'",
     "lint": "vue-cli-service lint"
