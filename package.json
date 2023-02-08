@@ -1,6 +1,6 @@
 {
   "name": "sericakitty.github.io",
-  "version": "2023.2.8",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "db:serve": "json-server --watch public/db.json",
@@ -37,5 +37,8 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "prettier": {
+    "singleQuote": true
+  }
 }
