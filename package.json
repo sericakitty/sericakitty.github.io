@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "db:serve": "json-server --watch public/db.json",
-    "serve": "vue-cli-service serve --https",
+    "serve": "vue-cli-service serve --host localhost --server",
     "build:prod": "vue-cli-service build --base='/sericakitty.github.io/'",
     "lint": "vue-cli-service lint"
   },
