@@ -5,6 +5,7 @@ module.exports = defineConfig({
   runtimeCompiler: true,
   devServer: {
     'https': true,
+     
   },
   publicPath: process.env.PUBLIC_URL || "/",
   chainWebpack: config => {
