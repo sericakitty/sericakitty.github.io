@@ -55,35 +55,35 @@
 
 		<h2 class="text-center projectshowcase">Projects showcase:</h2>
 		<div class="row">
-
-			<div class="column">
-				<a href="">
-					<div class="card">
-						<h3>Python</h3>
-						nte sint dolorum, ab eaque culpa, tempore quibusdam. Repellat corporis iure reiciendis ipsum.
-					</div>
-				</a>
+			<div class="text-center column">
+				<h3>JavaScript</h3>
+				<div class="card">
+					<a href="https://sericakitty.github.io/messagemixer/">
+						<img src="../assets/img/cards/messagemixer.png" alt="Message mixer - app" />
+					</a>
+				</div>
+				<p>Application where you can input string and it will cyphen it</p>
 			</div>
 
-			<div class="column">
-				<a href="">
-					<div class="card">
-						<h3>Vue.js</h3>
-						nte sint dolorum, ab eaque culpa, tempore quibusdam. Repellat corporis iure reiciendis ipsum.
-					</div>
-				</a>
+			<div class="text-center column">
+				<h3>Vue Js</h3>
+				<div class="card">
+					<a  href="https://sericakitty.github.io/phasergame/buginvader">
+						<img src="../assets/img/cards/buginvader.png" alt="Bug Invader">
+					</a>
+				</div>
+				<p>Phaser - game where you have to defeat bug invaders</p>
 			</div>
 
-			<div class="column">
-				<a href="">
-
-					<div class="card">
-
-						<h3>JavaScript</h3>
-						nte sint dolorum, ab eaque culpa, tempore quibusdam. Repellat corporis iure reiciendis ipsum.
-					</div>
-				</a>
-
+			<div class="text-center column">
+				<h3>Python 3</h3>
+				<div class="card">
+					<a href="https://sericakitty.github.io/tictactoe/">
+						<img src="../assets/img/cards/tictactoe.png" alt="Tic tac toe - game" />
+					</a>	
+				</div>
+				<p>Tic-tac-toe - game <br/> Play agains your friend</p>
+				
 			</div>
 
 		</div>
