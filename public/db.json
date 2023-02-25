@@ -52,7 +52,7 @@
     {
       "id": 2022,
       "year": 2022,
-      "isOpen": true,
+      "isOpen": false,
       "giglist": [
         {
           "id": 1,
