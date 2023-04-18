@@ -6,7 +6,7 @@
     <TheDjPageText />
     <h2 id='events'>Events that I've hosted with my friends and with my sister <a href='https://www.mixcloud.com/angelicaroselie/' target='_blank'>Angelica Roselie</a>.</h2>
 
-    <div v-if='gigs && events'>
+    <div v-if='gigs.length !== 0 && events.length !== 0'>
 
       <div class='events'>
         <TheEventList :events='events' />
@@ -29,7 +29,7 @@ import TheGigList from '@/components/TheGigList.vue';
 import TheDjPageText from '@/components/TheDjPageText.vue';
 import axios from 'axios';
 
-const BASEURI = 'http://localhost:3000';
+const BASEURI = './db.json';
 
 export default {
   data() {
@@ -45,18 +45,10 @@ export default {
   },
   async created() { // created hook, making ajax call. async so we are waiting response
     try {
-      const response = await axios.get(`${BASEURI}/gigs`)
+      const response = await axios.get(BASEURI)
       if (response.status === 200) {
-        this.gigs = response.data;
-      }
-    } catch (err) {
-      console.log(err);
-    }
-
-    try {
-      const response = await axios.get(`${BASEURI}/events`)
-      if (response.status === 200) {
-        this.events = response.data;
+        this.gigs = response.data.gigs;
+        this.events = response.data.events;
       }
     } catch (err) {
       console.log(err);
