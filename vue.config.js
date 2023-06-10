@@ -5,19 +5,15 @@ module.exports = defineConfig({
   runtimeCompiler: true,
   devServer: {
     'https': true,
-     
   },
-  publicPath: process.env.PUBLIC_URL || "/",
-  chainWebpack: config => {
+  publicPath: process.env.PUBLIC_URL || '/',
+  chainWebpack: (config) => {
     /* disable insertion of assets as data urls b/c Phaser doesn't support it */
     const rules = ['images', 'media'];
 
-    rules.forEach(rule => {
+    rules.forEach((rule) => {
       const ruleConf = config.module.rule(rule);
       ruleConf.type('asset/resource');
     });
-
   },
-
 });
-
