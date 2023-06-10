@@ -45,13 +45,13 @@ export default {
   },
   async created() { // created hook, making ajax call. async so we are waiting response
     try {
-      const response = await axios.get(BASEURI)
+      const response = await axios.get(BASEURI);
       if (response.status === 200) {
         this.gigs = response.data.gigs;
         this.events = response.data.events;
       }
     } catch (err) {
-      console.log(err);
+      console.log(err.message);
     }
   },
 };
