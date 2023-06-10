@@ -1,6 +1,6 @@
 {
   "name": "sericakitty.github.io",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "private": true,
   "scripts": {
     "database": "json-server --watch ./db.json",
@@ -16,7 +16,8 @@
     "single-spa-vue": "^2.5.1",
     "vue": "^3.2.41",
     "vue-router": "^4.1.6",
-    "vuex": "^4.1.0"
+    "vuex": "^4.1.0",
+    "@vue/cli-service": "~5.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
@@ -25,7 +26,6 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-plugin-vuex": "~5.0.0",
-    "@vue/cli-service": "~5.0.0",
     "@vue/eslint-config-airbnb": "^6.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-import": "^2.25.3",
