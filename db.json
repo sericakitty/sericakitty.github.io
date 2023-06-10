@@ -158,6 +158,24 @@
           "title": "Neonya!! Party: Hardcore Heat",
           "location": "Tiivistamo (Helsinki)",
           "date": "3.6.2023"
+        }, 
+        {
+          "id": 4,
+          "title": "Neonya!! Party: Pride Edition",
+          "location": "Tiivistamo (Helsinki)",
+          "date": "28.6.2023"
+        },
+        {
+          "id": 5,
+          "title": "Nekocon nightparty",
+          "location": "Nekocon (Kuopio)",
+          "date": "15.7.2023"
+        },
+        {
+          "id": 6,
+          "title": "Tracon x Neonya!! Party",
+          "location": "Tracon (Tampere)",
+          "date": "9.9.2023"
         }
       ]
     }
