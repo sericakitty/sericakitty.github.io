@@ -182,7 +182,25 @@
           "title": "Tracon x Neonya!! Party",
           "location": "Tracon (Tampere)",
           "date": "9.9.2023"
-        }
+        },
+        {
+          "id": 9,
+          "title": "Ravespace: One Year Anniversary",
+          "location": "Kiltakellari (Helsinki)",
+          "date": "17.11.2023"
+        },
+        {
+          "id": 10,
+          "title": "Ö-Mappi 11: Mielen silmä",
+          "location": "Puotila (Helsinki)",
+          "date": "12.12.2023"
+        },
+        {
+          "id": 11,
+          "title": "Tokyo Nights - 東京の夜",
+          "location": "Puotila (Helsinki)",
+          "date": "09.12.2023"
+        },
       ]
     }
   ],
