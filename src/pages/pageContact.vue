@@ -58,4 +58,12 @@
 .contact_button_div {
   margin-top: 20px;
 }
+
+.personal_contact_div {
+  text-align: center;
+}
+
+.personal_contact {
+  max-width: 550px;
+}
 </style>
