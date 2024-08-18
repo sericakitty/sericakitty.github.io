@@ -1,29 +1,6 @@
 @import url('Public/styles.css');
 
-/* self pic styling */
-.self_pic_div {
-  text-align: center;
-}
 
-.self_pic {
-  max-width: 450px;
-  max-height: 450px;
-  border-radius: 10px;
-}
-
-
-.self_logo {
-  width: 300px;
-  height: 64px;
-}
-
-.personal_contact_div {
-  text-align: center;
-}
-
-.personal_contact {
-  max-width: 550px;
-}
 
 
 
