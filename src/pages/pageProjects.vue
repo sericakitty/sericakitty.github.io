@@ -1,17 +1,15 @@
 <template>
   <h1 class="text-center">Web-game projects</h1>
   <div class="projects-container">
-    <div v-if="dataHandleError">
-      <p class="text-center">Failed to load data</p>
-    </div>
-    <div v-else-if="webGameProjects.length === 0">
-      <p class="text-center">Loading projects...</p>
+    <div v-if="dataHandleError" class="alert alert-danger" role="alert">
+      <span>
+        <strong>Oops!</strong> Something went wrong while fetching data.
+      </span>
     </div>
     <div v-else>
       <TheProjectCard v-for="project in webGameProjects" :key="project.id" :project="project" :technologies="technologies" />
     </div>
   </div>
-
 </template>
 
 
@@ -25,7 +23,6 @@ export default {
       webGameProjects: ref([]),
       commandLineProjects: ref([]),
       technologies: ref([]),
-      dataURL: 'Public/data.json',
       dataHandleError: ref(false)
     }
   },
@@ -34,7 +31,7 @@ export default {
   },
   async created() { // when site is loaded, fetch data from data.json
     try {
-      const response = await fetch(this.dataURL);
+      const response = await fetch('../../public/data.json');
       const data = await response.json();
       if (data) {
         this.technologies = data.technologies;
