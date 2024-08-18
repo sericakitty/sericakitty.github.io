@@ -91,6 +91,6 @@ export default {
 
 <style>
   .music-icon {
-    width: 150px;
+    max-width: 150px;
   }
 </style>
