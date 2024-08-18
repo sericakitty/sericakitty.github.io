@@ -10,9 +10,9 @@
   </div>
   <div class="text-center contact_button_div">
 
-    <a href="https://www.linkedin.com/in/serica-suhonen/" target="_blank" aria-label="Visit my LinkedIn profile">
+    <a href="https://www.instagram.com/sericakitty" target="_blank" aria-label="Visit my Instagram profile">
         <img class="contact-icon" src="../assets/images/instagram_logo.svg"
-          alt="LinkedIn logo and link" />
+          alt="Instagram logo and link" />
     </a>
 
     <a href="https://www.linkedin.com/in/serica-suhonen/" target="_blank" aria-label="Visit my LinkedIn profile">
@@ -35,7 +35,7 @@
 
 <style>
   .contact-icon {
-    max-width: 80px;
+    max-width: 50px;
     margin-right: 25px;
     margin-bottom: 15px;
     border-radius: 5px;
