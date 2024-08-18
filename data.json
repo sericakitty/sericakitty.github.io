@@ -1,0 +1,112 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "type": "Webgame",
+      "title": "Tic-Tac-Toe",
+      "imageURL": "./src/assets/images/tictactoe.webp",
+      "technologyTitles": [
+        "Python",
+        "PyScript",
+        "HTML5",
+        "CSS3",
+        "JavaScript"
+      ],
+      "additionalInfo": [
+        "Tic-Tac-Toe is a classic two-player game where players take turns marking a 3x3 grid with 'X' or 'O' to form a row, column, or diagonal of their marks and win. It's a simple and quick game of strategy and logic."
+      ],
+      "links": [
+        {
+          "text": "Source Code",
+          "url": "https://github.com/sericakitty/tictactoe"
+        },
+        {
+          "text": "Project running on",
+          "url": "https://sericakitty.github.io/tictactoe/"
+        }
+      ]
+    }
+  ],
+  "technologies": [
+    {
+      "id": 1,
+      "title": "MongoDB",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+    },
+    {
+      "id": 2,
+      "title": "Express.js",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+    },
+    {
+      "id": 3,
+      "title": "React",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+    },
+    {
+      "id": 4,
+      "title": "Node.js",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+    },
+    {
+      "id": 5,
+      "title": "CSS3",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+    },
+    {
+      "id": 6,
+      "title": "HTML5",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+    },
+    {
+      "id": 7,
+      "title": "Bootstrap",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
+    },
+    {
+      "id": 8,
+      "title": "Vue.js",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg"
+    },
+    {
+      "id": 9,
+      "title": "Python",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg"
+    },
+    {
+      "id": 10,
+      "title": "JavaScript",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+    },
+    {
+      "id": 11,
+      "title": "TypeScript",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+    },
+    {
+      "id": 12,
+      "title": "Jest",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
+    },
+    {
+      "id": 13,
+      "title": "Docker",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
+    },
+    {
+      "id": 14,
+      "title": "GitHub",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+    },
+    {
+      "id": 15,
+      "title": "MySQL",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+    },
+    {
+      "id": 16,
+      "title": "PyScript",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pyscript/pyscript-original-wordmark.svg"
+    }
+  ]
+}
