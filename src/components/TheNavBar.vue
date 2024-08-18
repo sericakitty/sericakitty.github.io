@@ -8,7 +8,7 @@
       </button>
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" :class="{ 'show': showNav, 'show-animate': showNav }" id="navbarNav">
-        <ul class="navbar-nav custom-dropdown ms-auto me-auto">
+        <ul class="navbar-nav ms-auto me-auto">
           <li v-for="link in navibarLinks" :key="link.name" class="nav-item">
             <router-link :to="{ name: link.name }" class="nav-link navtext" @click="closeNav">{{ link.title }}</router-link>
           </li>
@@ -40,14 +40,26 @@ export default {
       this.showNav = !this.showNav;
     },
     closeNav() {
-      this.showNav = false;
+      if (window.innerWidth < 992) {
+        this.showNav = false;
+      }
     },
+    handleResize() {
+      if (window.innerWidth >= 992 && this.showNav) {
+        this.showNav = false;
+      }
+    }
   },
+  mounted() {
+    window.addEventListener('resize', this.handleResize);
+  },
+  onUnmounted() {
+    window.removeEventListener('resize', this.handleResize);
+  }
 };
 </script>
 
-<style>
-
+<style scoped>
 nav {
   margin-bottom: 40px;
   background: var(--color-pastel-lilac);
@@ -81,6 +93,10 @@ nav {
   border-radius: 5px;
 }
 
+/* Navbar toggler icon customization */
+.navbar-light .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='rgb(252, 122, 191)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+}
 
 /* Toggler button styling */
 .navbar-light .navbar-toggler {
@@ -99,7 +115,7 @@ nav {
   top: 100%;
   right: 0;
   width: auto;
-  background: var(--color-pastel-lilac);
+  background: var(--color-light-pink);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   z-index: 1000;
@@ -125,61 +141,6 @@ nav {
   }
 }
 
-/* Desktop */
-@media (min-width: 991px) {
-  .navbar-nav {
-    justify-content: flex-end;
-    width: auto;
-  }
-
-  .collapse {
-    position: static;
-    display: block !important;
-    max-height: none;
-    width: auto;
-    background: transparent;
-    box-shadow: none;
-    margin-left: auto;
-    padding-right: 10px;
-  }
-
-  .navbar-nav .nav-item {
-    display: inline-block;
-    margin: 0 15px;
-  }
-
-  .navbar-toggler {
-    display: none;
-  }
-}
-
-/* Tablet */
-@media (min-width: 425.1px) and (max-width: 990.9px) {
-  .navbar-nav {
-    justify-content: center;
-  }
-
-  .collapse {
-    position: static;
-    display: block !important;
-    max-height: none;
-    width: auto;
-    background: transparent;
-    box-shadow: none;
-    margin-left: auto;
-    padding-right: 10px;
-  }
-
-  .navbar-nav .nav-item {
-    display: inline-block;
-    margin: 0 15px;
-  }
-
-  .navbar-toggler {
-    display: none;
-  }
-}
-
 /* Mobile styles */
 @media (max-width: 425px) {
   .navbar-nav {
@@ -195,6 +156,81 @@ nav {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
+  }
+
+  .nav-item:hover,
+.nav-item:focus {
+  background-color: var(--color-light-pink);
+  color: var(--color-light-pink);
+  border-radius: 5px;
+}
+}
+/* Media query for screens wider than 425.1px (Tablet & Desktop styles) */
+@media (min-width: 425.1px) and (max-width: 991.9px) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+  }
+
+  .collapse:not(.show) {
+    display: flex !important;
+  }
+
+
+  .collapse {
+    position: static;
+    display: block !important;
+    max-height: none;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    margin-left: auto;
+    padding-right: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    padding: 0 5px; /* Added small padding for link items */
+    margin: 0 5px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
+/* Media query for screens wider than 992px (Desktop styles) */
+@media (min-width: 992px) {
+  .navbar-nav {
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: auto;
+  }
+
+  .collapse:not(.show) {
+    display: flex !important;
+  }
+
+  .collapse {
+    position: static;
+    display: block !important;
+    max-height: none;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    margin-left: auto;
+    padding-right: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    margin: 0 15px; /* Increased margin for desktop sizes */
+    padding: 0 10px; /* Increased padding for link items */
+  }
+
+  .navbar-toggler {
+    display: none;
   }
 }
 
