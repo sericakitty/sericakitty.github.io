@@ -1,0 +1,51 @@
+:root {
+  --color-light-pink: #FFF4FF;
+  --color-pink: #FFC5FF;
+  --color-gradiant-pink: linear-gradient(to top, #FFF4FF, #ffc5ff);
+  --color-magenta: #FF6AEB;
+  --color-light-magenta: #f992e5;
+  --color-light-black: rgba(0,0,0,.55);
+  --color-light-white: rgba(255,255,255,.55);
+}
+
+body::before {
+  content: "";
+  background: url('./src/assets/images/hearts.webp') center center fixed no-repeat;
+  background-repeat: repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2;
+  z-index: -1; 
+}
+
+body {
+  background-color: var(--color-light-pink);
+  font-family: 'Roboto', sans-serif;
+  color: var(--color-light-black);
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-family: 'Petit Formal Script', cursive;
+  color: var(--color-magenta);
+}
+
+h2 {
+  font-size: 200%;
+  margin-bottom: 30px;
+  font-family: 'Petit Formal Script', cursive;
+  color: var(--color-magenta);
+}
+
+p {
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
+}
