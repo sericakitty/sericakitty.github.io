@@ -1,14 +1,13 @@
 <template>
   <h1 class="text-center">Web-game projects</h1>
-  <div class="projects-container">
-    <div v-if="dataHandleError" class="alert alert-danger" role="alert">
-      <span>
-        <strong>Oops!</strong> Something went wrong while fetching data.
-      </span>
-    </div>
-    <div v-else>
-      <TheProjectCard v-for="project in webGameProjects" :key="project.id" :project="project" :technologies="technologies" />
-    </div>
+  <div v-if="loading" class="text-center">
+    <p>Loading...</p>
+  </div>
+  <div v-else-if="dataHandlerError" class="text-center">
+    <p>Error loading projects. Please try again later.</p>
+  </div>
+  <div v-else class="projects-container">
+    <TheProjectCard v-for="project in webGameProjects" :key="project.id" :project="project" :technologies="technologies" />
   </div>
 </template>
 
@@ -23,7 +22,9 @@ export default {
       webGameProjects: ref([]),
       commandLineProjects: ref([]),
       technologies: ref([]),
-      dataHandleError: ref(false)
+      dataUrl: '../data.json',
+      dataHandlerError: ref(false),
+      loading: ref(true) // State to track loading
     }
   },
   components: {
@@ -31,16 +32,17 @@ export default {
   },
   async created() { // when site is loaded, fetch data from data.json
     try {
-      const response = await fetch('../../public/data.json');
+      const response = await fetch(this.dataUrl);
       const data = await response.json();
       if (data) {
         this.technologies = data.technologies;
         this.webGameProjects = data.projects.filter(p => p.type === 'Webgame');
-        
       }
     } catch (error) {
-      this.dataHandleError = true;
-    }
+      this.dataHandlerError = true; // Set error state if fetching fails
+    } finally {
+      this.loading = false; // Set loading to false once data is fetched or an error occurs
+    } 
   }
 }
 
