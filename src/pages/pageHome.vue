@@ -1,11 +1,13 @@
 <template>
   <div class="row">
     <div class="col">
-      <div class="self_pic_div">
-        <img class="self_pic" src="../assets/images/serica_kitty.webp" alt="Serica Kitty picture">
-      </div>
-      <div class="self_logo_div">
-        <img class="self_logo" src="../assets/images/serica_kitty_logo.webp" alt="Serica Kitty logo">
+      <div class="pic-logo-wrapper">
+        <div class="self_pic_div">
+          <img class="self_pic" src="../assets/images/serica_kitty.webp" alt="Serica Kitty picture">
+        </div>
+        <div class="self_logo_div">
+          <img class="self_logo" src="../assets/images/serica_kitty_logo.webp" alt="Serica Kitty logo">
+        </div>
       </div>
     </div>
     <div class="col">
@@ -40,4 +42,28 @@
   </div>
 </template>
 
-<style></style>
+<style>
+.pic-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* self pic styling */
+.self_pic_div {
+  text-align: center;
+}
+
+.self_pic {
+  max-width: 450px;
+  max-height: 450px;
+  border-radius: 10px;
+}
+
+
+.self_logo {
+  width: 300px;
+  height: 64px;
+}
+</style>
