@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style>
-/* Navbar overall styling */
+
 nav {
   margin-bottom: 40px;
   background: var(--color-pastel-lilac);
@@ -125,8 +125,8 @@ nav {
   }
 }
 
-/* Desktop and Tablet styles */
-@media (min-width: 768px) {
+/* Desktop */
+@media (min-width: 991px) {
   .navbar-nav {
     justify-content: flex-end;
     width: auto;
@@ -153,15 +153,42 @@ nav {
   }
 }
 
+/* Tablet */
+@media (min-width: 425.1px) and (max-width: 990.9px) {
+  .navbar-nav {
+    justify-content: center;
+  }
+
+  .collapse {
+    position: static;
+    display: block !important;
+    max-height: none;
+    width: auto;
+    background: transparent;
+    box-shadow: none;
+    margin-left: auto;
+    padding-right: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  .navbar-toggler {
+    display: none;
+  }
+}
+
 /* Mobile styles */
-@media (max-width: 767px) {
+@media (max-width: 425px) {
   .navbar-nav {
     text-align: center;
     flex-direction: column;
   }
 
   .collapse {
-    width: 200px; /* Säädä tämän laatikon leveys */
+    width: 200px;
   }
 
   .nav-item {
