@@ -28,10 +28,10 @@ export default {
   computed: {
     navibarLinks() {
       return [
-        { name: 'pageHome', title: 'About me' },
-        { name: 'pageProjects', title: 'Projects' },
-        { name: 'pageMusic', title: 'Music' },
-        { name: 'pageContact', title: 'Contact' },
+        { name: 'Home', title: 'About me' },
+        { name: 'Projects', title: 'Projects' },
+        { name: 'Music', title: 'Music' },
+        { name: 'Contact', title: 'Contact' },
       ];
     },
   },
