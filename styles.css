@@ -3,6 +3,9 @@
   --color-pink: #FFC5FF;
   --color-gradiant-pink: linear-gradient(to top, #FFF4FF, #ffc5ff);
   --color-magenta: #FF6AEB;
+  --color-dark-pink: #d662cd;
+  --color-lighter-pink: #da76d1;
+  --color-more-lighter-pink: #da85d3;
   --color-light-magenta: #f992e5;
   --color-light-black: rgba(0,0,0,.55);
   --color-light-white: rgba(255,255,255,.55);
@@ -10,7 +13,7 @@
 
 body::before {
   content: "";
-  background: url('./src/assets/images/hearts.webp') center center fixed no-repeat;
+  background: url('/assets/images/hearts.webp') center center fixed no-repeat;
   background-repeat: repeat;
   position: fixed;
   top: 0;
@@ -18,7 +21,7 @@ body::before {
   width: 100%;
   height: 100%;
   opacity: 0.2;
-  z-index: -1; 
+  z-index: -1;
 }
 
 body {
@@ -35,14 +38,26 @@ h1 {
   padding-top: 15px;
   padding-bottom: 15px;
   font-family: 'Petit Formal Script', cursive;
-  color: var(--color-magenta);
+  color: var(--color-lighter-pink);
 }
 
 h2 {
   font-size: 200%;
   margin-bottom: 30px;
   font-family: 'Petit Formal Script', cursive;
-  color: var(--color-magenta);
+  color: var(--color-lighter-pink);
+}
+
+h3 {
+  font-size: 150%;
+  margin-bottom: 20px;
+  color: var(--color-lighter-pink);
+}
+
+h4 {
+  font-size: 120%;
+  margin-bottom: 15px;
+  color: var(--color-lighter-pink);
 }
 
 p {
