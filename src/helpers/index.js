@@ -12,7 +12,7 @@ const checkDateIsPast = (date) => {
 };
 
 const formatDate = (date) => {
-  if (date === 'TBA') { return 'TBA'; }
+  if (date === 'TBA' || date === 'T.B.A' || date === 't.b.a' || date === 'tba') { return 'TBA'; }
   let day = date.split('.')[0];
   let month = date.split('.')[1];
   const year = date.split('.')[2];
