@@ -2,7 +2,6 @@ import { fileURLToPath, URL } from 'node:url'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import { viteStaticCopy } from 'vite-plugin-static-copy'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -14,14 +13,6 @@ export default defineConfig({
   publicPath: process.env.PUBLIC_PATH || '/',
   plugins: [
     vue(),
-    viteStaticCopy({
-      targets: [
-        {
-          src: '.data/**/*',
-          dest: 'dist/.data'
-        }
-      ]
-    })
   ],
   resolve: {
     alias: {
