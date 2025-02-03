@@ -12,7 +12,8 @@ const routes = [
   {
     path: '/music',
     name: 'Music',
-    component: () => import('Pages/PageMusic.vue')
+    component: () => import('Pages/PageMusic.vue'),
+    alias: '/gig-calendar'
   },
   {
     path: '/contact',
