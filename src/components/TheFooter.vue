@@ -9,7 +9,7 @@ export default {
   data() {
     return {
       year: '',
-      title: '', 
+      title: '',
     };
   },
   methods: {
@@ -19,7 +19,7 @@ export default {
   },
   beforeMount() {
     this.getCurrentYear();
-    this.title = document.title; 
+    this.title = document.title;
   },
 };
 </script>
@@ -29,5 +29,6 @@ footer {
   text-align: center;
   padding-bottom: 20px;
   padding-top: 20px;
+  margin-top: 30px;
 }
 </style>
