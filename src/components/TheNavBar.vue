@@ -9,8 +9,9 @@
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" :class="{ 'show': showNav, 'show-animate': showNav }" id="navbarNav">
         <ul class="navbar-nav ms-auto me-auto">
-          <li v-for="link in navibarLinks" :key="link.name" class="nav-item">
-            <router-link :to="{ name: link.name }" class="nav-link navtext" @click="closeNav">{{ link.title }}</router-link>
+          <li v-for="link in navBarLinks" :key="link.name" class="nav-item">
+            <router-link v-if="!link.external" :to="{ name: link.name }" class="nav-link navtext" @click="closeNav">{{ link.title }}</router-link>
+            <a v-else :href="link.url" target="_blank" rel="noopener noreferrer" class="nav-link navtext" @click="closeNav">{{ link.title }}</a>
           </li>
         </ul>
       </div>
@@ -26,12 +27,13 @@ export default {
     };
   },
   computed: {
-    navibarLinks() {
+    navBarLinks() {
       return [
         { name: 'Home', title: 'About me' },
         { name: 'Projects', title: 'Projects' },
         { name: 'Music', title: 'Music' },
         { name: 'Contact', title: 'Contact' },
+        { name: 'github', title: 'GitHub', external: true, url: 'https://github.com/sericakitty' }
       ];
     },
   },
@@ -62,35 +64,34 @@ export default {
 <style scoped>
 nav {
   margin-bottom: 40px;
-  background: var(--color-pastel-lilac);
-  padding: 5px 0;
   background-image: var(--color-gradiant-pink);
+  padding: 12px 0;
 }
 
-/* Navbar link styling */
 .nav-link {
   color: var(--color-light-black) !important;
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  padding: 8px 15px;
 }
 
 .nav-link.router-link-active {
-  color: var(--color-magenta) !important;
-  font-weight: bold;
-}
-
-/* Navbar item styling */
-.nav-item {
-  font-size: 1.35rem;
+  color: var(--color-more-lighter-pink) !important;
   font-weight: 500;
-  padding: 0px 10px;
 }
 
-/* Hover and focus effects for nav items */
-.nav-item:hover,
-.nav-item:focus {
+.nav-item {
+  font-size: 1.1rem;
+  padding: 0 5px;
+  margin: 0 2px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-item:hover {
   background-color: var(--color-pink);
-  color: var(--color-magenta);
-  border-radius: 5px;
+  border-radius: 8px;
 }
 
 /* Navbar toggler icon customization */
@@ -100,13 +101,14 @@ nav {
 
 /* Toggler button styling */
 .navbar-light .navbar-toggler {
-  border-color: transparent;
+  border: none;
+  padding: 8px;
+  transition: transform 0.2s ease;
 }
 
 /* Toggler button hover and focus effects */
-.navbar-light .navbar-toggler:hover,
-.navbar-light .navbar-toggler:focus {
-  box-shadow: none;
+.navbar-light .navbar-toggler:hover {
+  transform: scale(1.05);
 }
 
 /* Custom dropdown styling */
@@ -135,6 +137,7 @@ nav {
     opacity: 0;
     transform: translateY(-10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -149,6 +152,12 @@ nav {
   }
 
   .collapse {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 8px;
+    margin-top: 5px;
     width: 200px;
   }
 
@@ -156,15 +165,22 @@ nav {
     width: 100%;
     text-align: center;
     font-size: 1.2rem;
+    margin: 4px 0;
   }
 
   .nav-item:hover,
-.nav-item:focus {
-  background-color: var(--color-light-pink);
-  color: var(--color-light-pink);
-  border-radius: 5px;
+  .nav-item:focus {
+    background-color: var(--color-light-pink);
+    color: var(--color-light-pink);
+    border-radius: 5px;
+  }
+
+  .nav-link {
+    text-align: center;
+    padding: 10px;
+  }
 }
-}
+
 /* Media query for screens wider than 425.1px (Tablet & Desktop styles) */
 @media (min-width: 425.1px) and (max-width: 991.9px) {
   .navbar-nav {
@@ -191,7 +207,8 @@ nav {
 
   .navbar-nav .nav-item {
     display: inline-block;
-    padding: 0 5px; /* Added small padding for link items */
+    padding: 0 5px;
+    /* Added small padding for link items */
     margin: 0 5px;
   }
 
@@ -225,13 +242,12 @@ nav {
 
   .navbar-nav .nav-item {
     display: inline-block;
-    margin: 0 15px; /* Increased margin for desktop sizes */
-    padding: 0 10px; /* Increased padding for link items */
+    margin: 0 8px;
+    padding: 0 5px;
   }
 
   .navbar-toggler {
     display: none;
   }
 }
-
 </style>
