@@ -1,0 +1,112 @@
+@import url('Public/styles.css');
+
+/* Universal Styles */
+ul {
+  list-style-type: circle;
+}
+
+
+/* For closing & opening gig tables */
+details {
+  overflow: auto;
+  margin: 5px 0;
+  padding: 2px 0px;
+  color: var(--color-lighter-pink);
+}
+
+#hidden_div, .defaultHide {
+  display: none;
+}
+
+details[open] summary>#labelHide {
+  display: list-item;
+  color: var(--color-lighter-pink);
+  margin-bottom: 5px;
+}
+
+details[open] summary>#labelShow {
+  display: none;
+  color: var(--color-lighter-pink);
+  margin-bottom: 5px;
+}
+
+
+
+summary {
+  display: inline-flex;
+  cursor: pointer;
+  list-style: none;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 15px;
+  border-collapse: collapse;
+  color: var(--color-light-black);
+}
+
+td, th {
+  border-bottom: 1px solid var(--color-light-black);
+  padding: 5px 0px;
+}
+
+/* Responsive Styles */
+
+/* Mobile Small */
+@media (max-width: 374.98px) {
+  .textfield {
+    padding: 0 0px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 10px;
+  }
+}
+
+/* Mobile Medium */
+@media (min-width: 375px) and (max-width: 424.98px) {
+  .textfield {
+    padding: 0 25px;
+  }
+}
+
+/* Mobile Large */
+@media (min-width: 425px) and (max-width: 575.98px) {
+  .textfield {
+    padding: 0 30px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 992px) {
+  .textfield {
+    padding: 0 50px;
+  }
+
+  ul li {
+    font-size: 16px;
+  }
+}
+
+/* Large Screens */
+@media (min-width: 1441px) {
+  ul li {
+    font-size: 16px;
+  }
+}
