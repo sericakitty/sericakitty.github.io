@@ -7,13 +7,26 @@
     <div class="project-details">
       <h5>{{ projectTitle }}</h5>
       <p class="used-technologies">
-        <img v-for="techName in technologyTitles" :key="techName" class="small-devicon" :src="getTechIconUrl(techName)" :alt="techName" />
+        <img
+          v-for="techName in technologyTitles"
+          :key="techName"
+          class="small-devicon"
+          :src="getTechIconUrl(techName)"
+          :alt="techName"
+        />
       </p>
       <p v-for="info in additionalInfo" :key="info" class="heartbefore additional-info">
         {{ info }}
       </p>
       <div class="buttons">
-        <a v-for="link in links" :key="link.text" :href="link.url" class="project-button" target="_blank">
+        <a
+          v-for="link in links"
+          :key="link.text"
+          :href="link.url"
+          class="project-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {{ link.text }}
         </a>
       </div>
@@ -22,25 +35,25 @@
 </template>
 
 <script>
-import tictactoe from '../assets/images/tictactoe.webp';
+import tictactoe from '/assets/images/tictactoe.webp';
 
 export default {
   props: {
     project: Object,
-    technologies: Array
+    technologies: Array,
   },
   data() {
     return {
-      imageURL: "",
+      imageURL: '',
       projectTitle: this.project.title,
       additionalInfo: this.project.additionalInfo,
       links: this.project.links,
       technologyTitles: this.project.technologyTitles,
-    }
+    };
   },
   methods: {
     getTechIconUrl(techName) {
-      const tech = this.technologies.find(t => t.title === techName);
+      const tech = this.technologies.find((t) => t.title === techName);
       return tech ? tech.url : '';
     },
     getProjectImageURL() {
@@ -50,12 +63,13 @@ export default {
         default:
           return '';
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
+/* Technology icons */
 .small-devicon {
   max-width: 45px;
   max-height: 45px;
@@ -71,11 +85,7 @@ export default {
   margin-bottom: 10px;
 }
 
-.additional-info {
-  margin-bottom: 0px !important;
-  padding-bottom: 0px !important;
-}
-
+/* Project card styles */
 .project-card {
   font-size: 1rem;
   display: flex;
@@ -87,8 +97,6 @@ export default {
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
-  overflow-y: auto;
-  border: 1px solid rgba(0, 0, 0, 0.05);
   flex: 1 1 calc(50% - 20px);
   max-width: 500px;
 }
@@ -118,37 +126,43 @@ export default {
 
 .project-details p {
   color: var(--color-font-gray);
-  font-size: 0.90em;
+  font-size: 0.9rem;
   margin-bottom: 10px;
 }
 
+/* Buttons */
 .buttons {
   margin-top: auto;
   display: flex;
-  justify-content: flex-start;
-  padding-top: 10px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .project-button {
   text-decoration: none;
-  color: var(--white);
-  background-color: var(--color-btn-lilac);
-  padding: 5px 10px;
-  border-radius: 15px;
-  transition: background-color var(--link-transition-duration), color var(--link-transition-duration);
-  margin-right: 10px;
+  color: white;
+  background-color: var(--color-more-lighter-pink);
+  padding: 8px 16px;
+  border-radius: 20px;
   font-size: 0.9rem;
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .project-button:hover {
-  background-color: var(--color-semi-dark-lilac);
+  background-color: var(--color-light-pink);
+  color: var(--color-more-lighter-pink);
+  border-color: var(--color-more-lighter-pink);
+  transform: translateY(-2px);
 }
 
-.project-button:last-child {
-  margin-right: 0;
+.project-button:active {
+  transform: translateY(0);
 }
 
-
+/* Responsive styles */
 @media (max-width: 568px) {
   .project-details p {
     font-size: 0.8em;
@@ -170,14 +184,14 @@ export default {
     font-size: 0.9rem;
   }
 
-  .buttons {
-    flex-wrap: wrap;
+  .project-button {
+    padding: 4px 8px;
+    font-size: 0.85rem;
+    width: 40%;
   }
 
-  .project-button {
-    padding: 5px;
-    font-size: 0.85em !important;
-    margin-right: 5px;
+  .buttons {
+    gap: 8px;
   }
 }
 </style>
