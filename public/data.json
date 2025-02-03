@@ -4,7 +4,7 @@
       "id": 1,
       "type": "Webgame",
       "title": "Tic-Tac-Toe",
-      "imageURL": "./src/assets/images/tictactoe.webp",
+      "imageURL": "/assets/images/tictactoe.webp",
       "technologyTitles": [
         "Python",
         "PyScript",
