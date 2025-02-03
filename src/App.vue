@@ -1,4 +1,3 @@
-
 <template>
   <header>
     <TheNavBar />
@@ -32,12 +31,13 @@ export default {
 .custom-container {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 15px;
+  padding: 0 0px;
 }
 
 main {
   flex-grow: 1;
-  min-height: calc(90vh - 50px);
+  /* for fixing the footer */
+  min-height: calc(88vh - 50px);
 }
 
 /* Hide the first main layout */
