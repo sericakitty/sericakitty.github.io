@@ -6,42 +6,48 @@
   </div>
 
   <div class="personal_contact_div">
-    <img class="personal_contact" src="../assets/images/serica_kitty_mail.webp" alt="Artist email">
+    <img class="personal_contact" src="/assets/images/serica_kitty_mail.webp" alt="Artist email">
   </div>
   <div class="text-center contact_button_div">
 
     <a href="https://www.instagram.com/sericakitty" target="_blank" aria-label="Visit my Instagram profile">
-        <img class="contact-icon" src="../assets/images/instagram_logo.svg"
-          alt="Instagram logo and link" />
+      <img class="contact-icon" src="/assets/images/instagram_logo.svg" alt="Instagram logo and link" />
     </a>
 
     <a href="https://www.linkedin.com/in/serica-suhonen/" target="_blank" aria-label="Visit my LinkedIn profile">
-        <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-          alt="LinkedIn logo and link" />
+      <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+        alt="LinkedIn logo and link" />
     </a>
 
     <a href="https://github.com/sericakitty/" target="_blank" aria-label="Visit my Github profile">
-        <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="Github logo and link"/>
+      <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+        alt="Github logo and link" />
     </a>
 
 
     <a href="https://github.com/sericakitty/" target="_blank" aria-label="Visit my Facebook profile">
-        <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg" alt="Facebook logo and link"/>
+      <img class="contact-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/facebook/facebook-original.svg"
+        alt="Facebook logo and link" />
     </a>
-    
+
   </div>
 
 </template>
 
 <style>
-  .contact-icon {
-    max-width: 50px;
-    margin-right: 25px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-  }
+.contact-icon {
+  max-width: 50px;
+  margin-right: 25px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
 
-  .contact_button a {
+.contact-icon:hover {
+  transform: scale(1.1);
+}
+
+.contact_button a {
   margin: 5px;
   width: 100px;
   border-radius: 15px;
@@ -64,6 +70,33 @@
 }
 
 .personal_contact {
-  max-width: 550px;
+  max-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .contact-icon {
+    max-width: 40px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+  }
+
+  .personal_contact {
+    max-width: 250px;
+  }
+
+  .contact_button_div {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact-icon {
+    max-width: 35px;
+    margin-right: 12px;
+  }
+
+  .personal_contact {
+    max-width: 250px;
+  }
 }
 </style>
