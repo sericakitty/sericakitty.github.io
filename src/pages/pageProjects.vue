@@ -42,7 +42,7 @@ export default {
       this.dataHandlerError = true; // Set error state if fetching fails
     } finally {
       this.loading = false; // Set loading to false once data is fetched or an error occurs
-    } 
+    }
   }
 }
 
