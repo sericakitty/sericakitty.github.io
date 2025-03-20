@@ -3,11 +3,16 @@
 
     <a href="#giglist" class="gig-calendar-btn">Jump to Gig Calendar</a>
 
-    <h1>Serica Kitty as an artist</h1>
+    <div class="pic-logo-wrapper text-center">
+      <img class="self_logo mt-4" src="/assets/images/serica_kitty_logo_sticker.webp" alt="Serica Kitty logo" />
+      <h1 class="zero-margin-top">as an artist</h1>
+    </div>
+
 
     <div class="music-content">
       <div class="intro-section">
-        <p>I'm Serica Kitty, a Finnish artist & DJ known for blending melodic, powerful, and high-energy electronic music. My sets are all about atmosphere, vibrant energy, and uplifting basslines—crafted to tell a story and keep your mind and soul dancing. I have also started producing my own music, so stay tuned for upcoming releases!" 🎶✨</p>
+        <p>I'm Serica Kitty, a Finnish artist & DJ known for blending melodic, powerful, and high-energy electronic music. My sets are all about atmosphere, vibrant energy, and uplifting
+          basslines—crafted to tell a story and keep your mind and soul dancing. I have also started producing my own music, so stay tuned for upcoming releases!" 🎶✨</p>
 
         <!-- Upcoming Gigs -->
         <div class="upcoming-gigs" v-if="upcomingGigs.length">
@@ -118,6 +123,27 @@ export default {
 </script>
 
 <style scoped>
+.pic-logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px 30px 20px !important;
+  margin-top: 0px !important;
+  max-width: 100%;
+}
+
+.self_logo {
+  width: 700px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 0px !important;
+  padding-top: 0px !important;
+}
+
+.zero-margin-top {
+  margin-top: 0px;
+}
+
 .gig-calendar-btn {
   display: block;
   margin: 20px 0;
