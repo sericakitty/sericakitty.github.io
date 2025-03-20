@@ -4,8 +4,7 @@
 
       <div class="col-lg-4 col-md-5 d-flex flex-column align-items-center">
         <div class="pic-logo-wrapper text-center">
-          <img class="self_pic" src="/assets/images/serica_kitty.webp" alt="Serica Kitty picture" />
-          <img class="self_logo mt-4" src="/assets/images/serica_kitty_logo.webp" alt="Serica Kitty logo" />
+          <img class="self_pic" src="/assets/images/serica_cv_pic.webp" alt="Serica CV picture" />
         </div>
       </div>
 
@@ -14,13 +13,21 @@
           <h1>About Me</h1>
           <div class="textfield">
             <p>
-              I'm a <strong>Full Stack Developer</strong> from Helsinki with a passion for <strong>web technologies</strong>, <strong>IoT</strong>, and <strong>cybersecurity</strong>. My journey began in 2020 through self-study, leading me to pursue a <strong>BBA in Business Information Technology</strong> at Haaga-Helia (GPA 4.87/5), combining academic knowledge with hands-on experience in <strong>full-stack development</strong> and <strong>robotics</strong>.
+              I'm a <strong>Full Stack Developer</strong> from Helsinki with a deep passion for <strong>web technologies</strong>, <strong>IoT</strong>, and <strong>cybersecurity</strong>. My journey
+              into software development began in 2020 through self-study, eventually leading me to pursue a <strong>BBA in Business Information Technology</strong> at Haaga-Helia (GPA 4.88/5).
+              Throughout my studies, I've combined academic knowledge with hands-on experience in <strong>full-stack development</strong>, <strong>embedded systems</strong>, and
+              <strong>robotics</strong>.
             </p>
             <p>
-              I've strengthened my expertise with courses like the <strong>Full Stack Open</strong> from the University of Helsinki and gained industry experience at <strong>Virittämö Helsinki</strong>, working with <strong>MERN-stack technologies</strong> in an <strong>Agile environment</strong>. My projects span from <strong>IoT systems</strong> to <strong>real-time dashboards</strong>, showcasing <strong>technical skills</strong>, <strong>problem-solving</strong>, and <strong>teamwork</strong>.
+              To further expand my expertise, I have completed industry-recognized courses like the <strong>Full Stack Open</strong> from the University of Helsinki. I’ve also gained valuable industry
+              experience at <strong>Virittämö Helsinki</strong>, where I worked with <strong>MERN-stack technologies</strong> in an <strong>Agile environment</strong>. My projects range from
+              <strong>IoT-driven systems</strong> to <strong>real-time dashboards</strong>, demonstrating my ability to solve complex problems, build scalable solutions, and collaborate effectively
+              within a team.
             </p>
             <p>
-              Beyond professional work, I actively develop <strong>personal projects</strong>, mentor others in <strong>programming</strong>, and explore <strong>embedded systems</strong>. I also express my creativity through <strong>music</strong> as a <strong>DJ & artist</strong>, blending technical and artistic pursuits.
+              Beyond my professional work, I am deeply involved in <strong>personal projects</strong>, mentoring aspiring developers, and exploring new innovations in <strong>embedded
+                systems</strong>. My creativity also extends beyond coding—I’m a <strong>DJ & artist</strong>, blending technology with music to create unique experiences that bridge the worlds of art
+              and engineering.
             </p>
           </div>
         </div>
@@ -59,11 +66,33 @@ export default {
   data() {
     return {
       technicalSkills: {
-        Frontend: ["React, Redux, Next.js", "Vue.js, Pinia", "TypeScript, JavaScript ES6+", "CSS3, HTML5, Bootstrap"],
-        Backend: ["Node.js, Express, Deno", "Python3, Django, PyScript", "Java, Spring Boot", "REST APIs"],
-        Databases: ["MongoDB", "PostgreSQL, SQLite"],
-        "Development Tools": ["Git, GitHub, CI/CD", "Docker, Azure", "Testing (Jest, Cypress)", "Figma, UI/UX Design"],
-        IoT: ["IoT Development (C++, Python)", "3D Modeling (Blender) and Printing"],
+        Frontend: [
+          "React, Redux, Next.js",
+          "Vue.js, Pinia",
+          "TypeScript, JavaScript ES6+",
+          "CSS3, HTML5, Bootstrap"
+        ],
+        Backend: [
+          "Node.js, Express, Deno",
+          "Python3, Django, PyScript",
+          "Java, Spring Boot",
+          "REST APIs"
+        ],
+        Databases: [
+          "PostgreSQL, SQLite",
+          "MongoDB"
+        ],
+        IoT: [
+          "ESP32, Arduino, Raspberry Pi",
+          "IoT Development (C++, Python)",
+          "3D Modeling (Blender) and Printing"
+        ],
+        "Development Tools": [
+          "Git, GitHub, CI/CD",
+          "Docker, Azure",
+          "Testing (Jest, Cypress)",
+          "Figma, UI/UX Design"
+        ],
       },
       professionalSkills: [
         "Agile Development & Project Planning",
@@ -93,9 +122,11 @@ export default {
   align-items: center;
   padding: 10px 20px;
   max-width: 100%;
+  margin-top: 1rem;
 }
 
 .self_pic {
+  width: 400px;
   max-width: 100%;
   height: auto;
   border-radius: 15px;
@@ -103,10 +134,6 @@ export default {
   transition: transform 0.3s ease;
 }
 
-.self_logo {
-  width: 300px;
-  height: auto;
-}
 
 .skills-section {
   margin-top: 2rem;
@@ -152,6 +179,53 @@ export default {
   position: absolute;
   left: 0;
   font-weight: bold;
+}
+
+/* Media queries for better responsive behavior */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .self_pic {
+    width: 80%; /* Reduced from 100% */
+    min-width: 280px;
+    max-width: 350px;
+    margin: 3rem 0 2.5rem 0;
+  }
+
+  .pic-logo-wrapper {
+    margin-top: 2rem;
+    padding: 15px;
+  }
+
+  .intro-wrapper {
+    padding: 15px 20px;
+    margin-top: 2rem;
+  }
+
+  .textfield p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .self_pic {
+    width: 320px;
+    margin: 2.5rem 0 2rem 0;
+  }
+
+  .pic-logo-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .intro-wrapper {
+    padding-right: 20px;
+    margin-top: 1.5rem;
+  }
+
+  .textfield p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
 }
 
 @media (max-width: 767.98px) {
