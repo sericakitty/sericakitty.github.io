@@ -170,7 +170,7 @@ export default {
   }
 
   .project-details {
-    padding: 10px;
+    padding: 12px;
   }
 
   .small-devicon {
@@ -179,9 +179,10 @@ export default {
   }
 
   .project-card {
-    width: 100%;
-    margin: 10px 0;
+    width: 90%;
+    margin: 10px auto;
     font-size: 0.9rem;
+    max-width: 400px;
   }
 
   .project-button {
