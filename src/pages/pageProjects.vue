@@ -1,9 +1,9 @@
 <template>
   <h1 class="text-center">Web-game projects</h1>
-  <div v-if="loading" class="text-center">
+  <div v-if="loading" class="loading-container">
     <p>Loading...</p>
   </div>
-  <div v-else-if="dataHandlerError" class="text-center">
+  <div v-else-if="dataHandlerError" class="error-container">
     <p>Error loading projects. Please try again later.</p>
   </div>
   <div v-else class="projects-container">
@@ -68,5 +68,14 @@ export default {
     align-items: center;
     padding: 0px;
   }
+}
+
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
 }
 </style>
