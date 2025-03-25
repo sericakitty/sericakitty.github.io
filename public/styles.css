@@ -9,6 +9,7 @@
   --color-light-magenta: #f992e5;
   --color-light-black: rgba(0,0,0,.65);
   --color-light-white: rgba(255,255,255,.55);
+  --color-card-bg: #fef2ff;
 }
 
 body::before {
