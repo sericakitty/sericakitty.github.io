@@ -1,7 +1,7 @@
 <template>
   <div class="project-card">
     <div class="project-image-container">
-      <img :src="getProjectImageURL()" :alt="projectTitle" />
+      <img :src="project.imageURL" :alt="projectTitle" />
     </div>
 
     <div class="project-details">
@@ -35,7 +35,6 @@
 </template>
 
 <script>
-import tictactoe from '/assets/images/tictactoe.webp';
 
 export default {
   props: {
@@ -44,7 +43,6 @@ export default {
   },
   data() {
     return {
-      imageURL: '',
       projectTitle: this.project.title,
       additionalInfo: this.project.additionalInfo,
       links: this.project.links,
@@ -55,15 +53,7 @@ export default {
     getTechIconUrl(techName) {
       const tech = this.technologies.find((t) => t.title === techName);
       return tech ? tech.url : '';
-    },
-    getProjectImageURL() {
-      switch (this.projectTitle) {
-        case 'Tic-Tac-Toe':
-          return tictactoe;
-        default:
-          return '';
-      }
-    },
+    }
   },
 };
 </script>

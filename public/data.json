@@ -25,86 +25,176 @@
           "url": "https://sericakitty.github.io/tictactoe/"
         }
       ]
+    },
+    {
+      "id": 2,
+      "type": "Other",
+      "title": "CPU Optimization in Azure Python Project",
+      "imageURL": "/assets/images/azure_optimization.webp",
+      "technologyTitles": [
+        "Python",
+        "Azure",
+        "Docker"
+      ],
+      "additionalInfo": [
+        "In this private Azure-based project, I optimized a Python application running in a container. By replacing BeautifulSoup with lxml for HTML parsing and refining other parts of the code, I significantly reduced CPU usage. The chart shows a clear drop in CPU spikes after the optimization—demonstrating a more efficient and resource-friendly implementation."
+      ],
+      "links": []
     }
   ],
   "technologies": [
     {
       "id": 1,
-      "title": "MongoDB",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg"
+      "title": "Node.js",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
     },
     {
       "id": 2,
       "title": "Express.js",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original-wordmark.svg"
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg"
     },
     {
       "id": 3,
-      "title": "React",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg"
+      "title": "MongoDB",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
     },
     {
       "id": 4,
-      "title": "Node.js",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg"
+      "title": "Firebase",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain-wordmark.svg"
     },
     {
       "id": 5,
-      "title": "CSS3",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg"
+      "title": "Django",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg"
     },
     {
       "id": 6,
-      "title": "HTML5",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg"
+      "title": "REST API",
+      "url": "/assets/img/rest-api-logo.svg"
     },
     {
       "id": 7,
-      "title": "Bootstrap",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg"
+      "title": "React",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
     },
     {
       "id": 8,
-      "title": "Vue.js",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original-wordmark.svg"
+      "title": "Redux",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg"
     },
     {
       "id": 9,
-      "title": "Python",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg"
+      "title": "Vue.js",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg"
     },
     {
       "id": 10,
-      "title": "JavaScript",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+      "title": "Ionic",
+      "url": "/assets/img/ionic-logo.svg"
     },
     {
       "id": 11,
+      "title": "Pinia",
+      "url": "/assets/img/pinia-for-vue-logo.webp"
+    },
+    {
+      "id": 12,
+      "title": "JavaScript",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+    },
+    {
+      "id": 13,
       "title": "TypeScript",
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
     },
     {
-      "id": 12,
-      "title": "Jest",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg"
-    },
-    {
-      "id": 13,
-      "title": "Docker",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg"
-    },
-    {
       "id": 14,
-      "title": "GitHub",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg"
+      "title": "PHP",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
     },
     {
       "id": 15,
-      "title": "MySQL",
-      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg"
+      "title": "CSS3",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
     },
     {
       "id": 16,
+      "title": "HTML5",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+    },
+    {
+      "id": 17,
+      "title": "Bootstrap",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg"
+    },
+    {
+      "id": 18,
+      "title": "Figma",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+    },
+    {
+      "id": 19,
+      "title": "Jest",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jest/jest-plain.svg"
+    },
+    {
+      "id": 20,
+      "title": "Cypress",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cypressio/cypressio-original.svg"
+    },
+    {
+      "id": 21,
+      "title": "Playwright",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/playwright/playwright-original.svg"
+    },
+    {
+      "id": 22,
+      "title": "Git",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg"
+    },
+    {
+      "id": 23,
+      "title": "GitHub",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg"
+    },
+    {
+      "id": 24,
+      "title": "GitHub Actions",
+      "url": "/assets/img/github-actions-logo.svg"
+    },
+    {
+      "id": 25,
+      "title": "Docker",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg"
+    },
+    {
+      "id": 26,
+      "title": "Azure",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original-wordmark.svg"
+    },
+    {
+      "id": 27,
+      "title": "Python",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original-wordmark.svg"
+    },
+    {
+      "id": 28,
+      "title": "SQLite",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original-wordmark.svg"
+    },
+    {
+      "id": 29,
+      "title": "MySQL",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
+    },
+    {
+      "id": 30,
+      "title": "PostgreSQL",
+      "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg"
+    },
+    {
+      "id": 31,
       "title": "PyScript",
       "url": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pyscript/pyscript-original-wordmark.svg"
     }
