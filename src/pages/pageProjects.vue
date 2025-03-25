@@ -1,4 +1,5 @@
 <template>
+  <!-- Web Game Projects -->
   <h1 class="text-center">Web-game projects</h1>
   <div v-if="loading" class="loading-container">
     <p>Loading...</p>
@@ -8,6 +9,17 @@
   </div>
   <div v-else class="projects-container">
     <TheProjectCard v-for="project in webGameProjects" :key="project.id" :project="project" :technologies="technologies" />
+  </div>
+  <!-- Other Projects -->
+  <h1 class="text-center">Other projects</h1>
+  <div v-if="loading" class="loading-container">
+    <p>Loading...</p>
+  </div>
+  <div v-else-if="dataHandlerError" class="error-container">
+    <p>Error loading projects. Please try again later.</p>
+  </div>
+  <div v-else class="projects-container">
+    <TheProjectCard v-for="project in otherProjects" :key="project.id" :project="project" :technologies="technologies" />
   </div>
 </template>
 
@@ -20,6 +32,7 @@ export default {
   data() {
     return {
       webGameProjects: ref([]),
+      otherProjects: ref([]),
       commandLineProjects: ref([]),
       technologies: ref([]),
       dataUrl: '../data.json',
@@ -37,6 +50,7 @@ export default {
       if (data) {
         this.technologies = data.technologies;
         this.webGameProjects = data.projects.filter(p => p.type === 'Webgame');
+        this.otherProjects = data.projects.filter(p => p.type === 'Other');
       }
     } catch (error) {
       this.dataHandlerError = true; // Set error state if fetching fails
